@@ -1,6 +1,22 @@
 {
   "news":[
     {
+      "img":"http://img.naozhendang.com/news020.jpg",
+      "des_en": "Furry Eyeballz Cube",
+      "des_cn": "毛绒眼球立方",
+      "link":"",
+      "tag":"",
+      "date":"July, 2018"
+    },
+    {
+      "img":"http://img.naozhendang.com/news019.jpg",
+      "des_en": "Metallic Eyeballz Cube",
+      "des_cn": "金属色眼球立方",
+      "link":"",
+      "tag":"",
+      "date":"July, 2018"
+    },
+    {
       "img":"http://img.naozhendang.com/news018.jpg",
       "des_en": "Eyeballz Cube at Vanke Design Commune.",
       "des_cn": "眼球立方在万科云设计公社",
