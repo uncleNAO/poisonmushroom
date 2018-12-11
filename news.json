@@ -1,7 +1,7 @@
 {
   "news":[
     {
-      "img":"http://img.naozhendang.com/news020.jpg",
+      "img":"http://img.naozhendang.com/news020_update.jpg",
       "des_en": "Furry Eyeballz Cube",
       "des_cn": "毛绒眼球立方",
       "link":"",
@@ -114,8 +114,8 @@
     },
     {
       "img":"http://img.naozhendang.com/news007.jpg",
-      "des_en": "Split-Flap Display v1 displaying both English and Chinese.",
-      "des_cn": "翻牌动态机械装置v1显示英文和中文。",
+      "des_en": "Split-Flap Display displaying both English and Chinese.",
+      "des_cn": "翻牌动态机械装置显示英文和中文。",
       "link":"",
       "tag":"",
       "date":"February, 2018"

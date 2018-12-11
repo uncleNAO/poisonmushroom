@@ -1,160 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+**************************
+Author: Poison Mushroom
+Version: 1.0.0
+**************************
+-->
+<html>
 	<head>
 		<title>毒蘑菇 - Poison Mushroom</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-		body {
-		  color: #ffffff;
-		  font-family:Monospace;
-		  font-size:13px;
-		  text-align:center;
-		  font-weight: normal;
-		  background-color: #000000;
-		  margin: 0px;
-		  overflow: hidden;
-		}
-
-		#logo {
-		  position: absolute;
-		  top:50%;
-		  left: 50%;
-		  margin-left: -20%;
-		  margin-top: -6%;
-		  width: 40%;
-		}
-
-		#logo img{
-		  width: 100%;
-		}
-
-		a {
-		  color: #ffffff;
-		}
-
-		.coming{
-		  position: absolute;
-		  display: block;
-		  top:60%;
-		  text-align: center;
-		  width: 100%;
-		  font-size: 1.5em;
-		  font-style: italic;
-		}
-
-		</style>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Poison Mushroom is an artistic collective dedicated to developing novel and playful interactions and experiences. 毒蘑菇(Poison Mushroom)是致力于创造好玩的交互方式和互动体验的艺术团队。" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
-	<body>
-
-		<div id="container">
-				<div id="logo"><img src="pm_logo.svg" /></div>
-				<div class="coming">coming soon</div>
-		</div>
-
-		<script src="three.min.js"></script>
-
-		<script src="Detector.js"></script>
-
-		<script id="vertexShader" type="x-shader/x-vertex">
-
-			varying vec2 vUv;
-
-			void main()	{
-
-				vUv = uv;
-
-				gl_Position = vec4( position, 1.0 );
-
-			}
-
-		</script>
-
-		<script id="fragmentShader" type="x-shader/x-fragment">
-
-			varying vec2 vUv;
-
-			uniform float time;
-
-			void main()	{
-
-				vec2 position = - 1.0 + 2.0 * vUv;
-
-				float red = abs( sin( position.x * position.y + time / 5.0 ) );
-				float green = abs( sin( position.x * position.y + time / 4.0 ) );
-				float blue = abs( sin( position.x * position.y + time / 3.0 ) );
-				gl_FragColor = vec4( red, green, blue, 1.0 );
-			}
-
-		</script>
-
-		<script>
-
-			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-
-			var container;
-
-			var camera, scene, renderer;
-
-			var uniforms;
-
-			init();
-			animate();
-
-			function init() {
-
-				container = document.getElementById( 'container' );
-
-				camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
-
-				scene = new THREE.Scene();
-
-				var geometry = new THREE.PlaneBufferGeometry( 2, 2 );
-
-				uniforms = {
-					time: { value: 1.0 }
-				};
-
-				var material = new THREE.ShaderMaterial( {
-
-					uniforms: uniforms,
-					vertexShader: document.getElementById( 'vertexShader' ).textContent,
-					fragmentShader: document.getElementById( 'fragmentShader' ).textContent
-
-				} );
-
-				var mesh = new THREE.Mesh( geometry, material );
-				scene.add( mesh );
-
-				renderer = new THREE.WebGLRenderer();
-				renderer.setPixelRatio( window.devicePixelRatio );
-				container.appendChild( renderer.domElement );
-
-				onWindowResize();
-
-				window.addEventListener( 'resize', onWindowResize, false );
-
-			}
-
-			function onWindowResize( event ) {
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-			}
-
-			//
-
-			function animate( timestamp ) {
-
-				requestAnimationFrame( animate );
-
-				uniforms.time.value = timestamp / 1000;
-
-				renderer.render( scene, camera );
-
-			}
-
-		</script>
-
+	<body class="index">
+			<!-- Header -->
+			<header id="header" class="header">
+				<div class="row">
+					<nav>
+						<ul>
+							<li><a href="mailto:hello@poisonmushroom.cc" title="Email" target="_blank"><i class="fa fa-envelope"></i></a></li>
+							<li class="li-weixin"><a href="javascript:void(0);"><i class="fa fa-weixin"></i></a><div class='weixin'><img src='images/pmqr.jpg' /></div></li>
+							<li><a href="https://www.youtube.com/channel/UCLFu2TYoySRzuvpqKEVXLAQ" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/_poisonmushroom" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</nav>
+					<h1><img src="images/pm_logo.svg"/></h1>
+				</div>
+			</header>
+			<!-- Works -->
+			<section id="works" class="fs">
+				<a href="works.html"><h2>Works</h2></a>
+				<div class="worksbg"></div>
+			</section>
+			<!-- Services -->
+			<section id="news" class="fs">
+				<a href="news.html"><h2>News</h2></a>
+			</section>
+			<!-- About -->
+			<section id="info" class="fs">
+				<a href="info.html"><h2>Info</h2></a>
+			</section>
+			<!-- Footer -->
+			<section id="footer">
+				<div class="copyright">Copyright &copy; 2018 Poison Mushroom</div>
+			</section>
 	</body>
 </html>

@@ -1,0 +1,807 @@
+/*
+**************************
+Author: Poison Mushroom
+Version: 1.0.0
+**************************
+*/
+@charset "UTF-8";
+@import url("font-awesome.min.css");
+/* Fonts */
+
+/* Lovelo */
+@font-face {
+font-family: Lovelo;
+src: url("../fonts/Lovelo Line Light.otf") format("opentype");
+font-weight: 300;
+font-style:normal;
+}
+@font-face {
+font-family: Lovelo;
+src: url("../fonts/Lovelo Line Bold.otf") format("opentype");
+font-weight: 500;
+font-style:normal;
+}
+@font-face {
+font-family: Lovelo;
+src: url("../fonts/Lovelo Black.otf") format("opentype");
+font-weight: 700;
+font-style:normal;
+}
+
+/* Gothan */
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/Gotham-Bold.otf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/Gotham-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Medium.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/Gotham-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/Gotham-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Light.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/Gotham-Light.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/Gotham-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/Gotham-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Thin';
+	src: url('../fonts/gotham-thin-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/gotham-thin-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/gotham-thin-webfont.woff') format('woff'), /* Modern Browsers */
+		url('../fonts/gotham-thin-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gotham-thin-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* Basic */
+	body{
+		background-color: #fff;
+	}
+	body, #skel-layers-wrapper,*{
+		margin:0;
+	}
+
+	html {
+	height:100%;
+	min-height:100%;
+	}
+
+	body.loading * {
+		/*-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-o-transition: none !important;
+		-ms-transition: none !important;
+		transition: none !important;*/
+	}
+
+	body, input, select, textarea {
+		color: #000;
+		font-family: 'Gotham', sans-serif;
+		font-size: 18pt;
+		font-weight: 400;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+		a:hover {
+			border-bottom-color: transparent;
+		}
+
+	strong, b {
+		font-weight: 400;
+	}
+
+	p, ul, ol, dl, table, blockquote {
+		margin: 0 0 2rem 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: inherit;
+		font-weight: 300;
+		line-height: 2rem;
+		text-transform: uppercase;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+			border: 0;
+		}
+
+	h2 {
+		font-size: 1.7rem;
+		letter-spacing: 0.15rem;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+		letter-spacing: 0.03rem;
+	}
+
+	sup {
+		font-size: 1rem;
+		position: relative;
+		top: -0.5rem;
+	}
+
+	hr {
+		border-top: solid 1px rgba(124, 128, 129, 0.2);
+		border: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	blockquote {
+		border-left: solid 0.5rem rgba(124, 128, 129, 0.2);
+		font-style: italic;
+		padding: 1rem 0 1rem 2rem;
+	}
+
+
+/* Section */
+	section{
+		margin: 0;
+		width: 100%;
+	}
+	section h2{
+		text-align:center;
+		font-family: 'Lovelo';
+		font-weight: 500;
+		letter-spacing: 1.5rem;
+		color: #000;
+		font-size:7rem;
+		padding: 11% 0;
+		line-height: 100%;
+
+		-moz-transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+		-o-transition: color 0.3s;
+		-ms-transition: color 0.3s;
+		transition: color 0.3s;
+	}
+
+	section h2:hover{
+		-moz-transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+		-o-transition: color 0.3s;
+		-ms-transition: color 0.3s;
+		transition: color 0.3s;
+	}
+
+	section article{
+		width: 80%;
+		margin: auto;
+		padding: 6% 0;
+		font-size: 1rem;
+	}
+
+	section article .thin{
+		/* font-weight: 300; */
+		color: #333;
+	}
+
+	section article .center{
+		text-align: center;
+	}
+
+	section .content{
+		width: 70%;
+		margin: auto;
+	}
+
+	section .content p{
+		line-height: 200%;
+	}
+
+	section .content a,section .content a:active,section .content a:visited{
+		color:#666;
+		text-decoration: underline;
+	}
+
+/* Button */
+
+	button {
+		position: relative;
+		line-height: 1rem;
+		font-size: 1.5rem;
+		border: 3px solid #333;
+		font-weight:700;
+		margin: 0;
+		padding: 0;
+	}
+
+	button a{
+		color: #333;
+		padding: 20px 20px;
+		display: inline-block;
+		background: #f6f6f6;
+		-moz-transition: background 0.5s;
+		-webkit-transition: background 0.5s;
+		-o-transition: background 0.5s;
+		-ms-transition: background 0.5s;
+		transition: background 0.5s;
+	}
+
+		button a:hover {
+			background: #fff;
+		}
+
+
+/* Wrapper */
+
+	.wrapper {
+		margin-bottom: 5rem;
+		padding: 5rem;
+	}
+
+	.row{
+		width: 90%;
+		margin: auto;
+		clear: both;
+	}
+/* Header */
+
+	#header {
+		color: #000;
+		width: 100%;
+
+		-moz-transition: top 0.5s;
+		-webkit-transition: top 0.5s;
+		-o-transition: top 0.5s;
+		-ms-transition: top 0.5s;
+		transition: top 0.5s;
+	}
+
+	#header h1{
+		width: 240px;
+		padding: 1.5rem 0;
+	}
+
+	.header h1 img{
+		width: 100%;
+	}
+
+	#sheader h1{
+		width: 52px;
+		padding: 1.5rem 0;
+	}
+
+	.header nav {
+		text-align:right;
+		float: right;
+	}
+
+	.header nav ul {
+		margin:0;
+	}
+
+		#header nav ul li {
+			display: inline-block;
+			margin:2.5rem 1rem 0;
+			color:#000;
+			text-transform: uppercase;
+		}
+
+			#header nav ul li a {
+				color: inherit;
+				display: inline-block;
+				letter-spacing: 0;
+				padding: 0;
+				text-decoration: none;
+				font-size: 1.6rem;
+			}
+
+			#header nav ul li.active > a, #header nav ul li:hover > a {
+				-moz-transition: all 0.3s ease-in-out;
+				-webkit-transition: all 0.3s ease-in-out;
+				-o-transition: all 0.3s ease-in-out;
+				-ms-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				color:#888;
+			}
+
+			#header nav ul li.li-weixin{
+				position: relative;
+			}
+
+			#header nav ul li.li-weixin:hover .weixin{
+				position: absolute;
+				top:35px;
+				left: -90px;
+				display: block;
+				width: 200px;
+				height: 200px;
+				box-shadow: 0 1px 3px rgba(26,26,26,.1);
+				box-sizing: border-box;
+				border-radius: 5px;
+				overflow: hidden;
+				z-index: 999;
+			}
+
+			#header nav ul li.li-weixin .weixin{
+					display: none;
+			}
+
+			#header nav ul li.li-weixin .weixin img{
+				width: 100%;
+			}
+
+			#sheader nav ul li {
+				display: inline-block;
+				margin:2.5rem 1rem 0;
+				color:#888;
+				text-decoration: underline;
+				text-transform: uppercase;
+			}
+
+				#sheader nav ul li a {
+					color: inherit;
+					display: inline-block;
+					letter-spacing: 0;
+					padding: 0;
+					text-decoration: none;
+					font-size: 1.4rem;
+					color:#000;
+				}
+
+				#sheader nav ul li.active > a, #sheader nav ul li:hover > a {
+					-moz-transition: all 0.3s ease-in-out;
+					-webkit-transition: all 0.3s ease-in-out;
+					-o-transition: all 0.3s ease-in-out;
+					-ms-transition: all 0.3s ease-in-out;
+					transition: all 0.3s ease-in-out;
+					color:#888;
+				}
+/* Works */
+	#works{
+		color: #fff;
+		position:relative;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	#works h2{
+		position:relative;
+		color: #fff;
+		z-index: 99;
+	}
+
+	#works h2:hover{
+		color:#ffe100;
+	}
+
+	#works .worksbg{
+		position: absolute;
+		top:0;
+		left: 0;
+		background: #FFF url('../images/works00.jpg') no-repeat center center;
+		background-size: cover;
+		display: block;
+		width: 100%;
+		min-height: 450px;
+		z-index: 1;
+	}
+
+	.video{
+		position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+	}
+
+	.video iframe{
+		position: absolute;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 height: 100%;
+	}
+
+	p.img img{
+		width: 100%;
+		height: auto;
+	}
+
+/* News */
+		#news {
+			color: #fff;
+			background: #FFF url('../images/news00.jpg') no-repeat center center;
+			background-size: cover;
+			position:relative;
+			cursor: pointer;
+		}
+
+		#news h2{
+			color: #fff;
+		}
+
+		#news h2:hover{
+			color:#0d62ff;
+		}
+
+/* About */
+
+		#info{
+				background: #FFF url('../images/info_bg.jpg') no-repeat center center;
+				position:relative;
+				cursor: pointer;
+		}
+
+		#info h2{
+			color: #fff;
+		}
+
+		#info h2:hover{
+			color: #ff6c00;
+		}
+
+
+/* Info */
+
+#info_page{
+	background: #f6f6f6;
+}
+
+ul.donka{
+	margin: 0;
+	padding: 0;
+}
+
+ul.donka li{
+	float: left;
+	display: block;
+	background: #ccc;
+	margin-bottom: 8%;
+	cursor: pointer;
+	padding:0;
+}
+
+ul.donka li.dz{
+	background: #FFF url('../images/dz.jpg') no-repeat 0 0;
+	background-size: 100%;
+}
+
+ul.donka li.wei{
+	background: #FFF url('../images/wei.jpg') no-repeat 0 0;
+	background-size: 100%;
+}
+
+
+ul.donka li:hover{
+	background-position: 0 100%;
+}
+
+#info_page .logo{
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+#info_page .logo img{
+	width: 100%;
+}
+/* Works */
+#works_page{
+	background: #f6f6f6;
+}
+
+ul.projects{
+	margin: 0;
+	padding: 0;
+}
+
+ul.projects li{
+	list-style: none;
+	margin-bottom: 4%;
+	cursor: pointer;
+}
+
+ul.projects li a{
+	display: table-cell;
+	width: 80vw;
+	height: 40vw;
+  vertical-align: middle;
+  text-align: center;
+	-moz-transition: background 0.3s ease-in-out;
+	-webkit-transition: background 0.3s ease-in-out;
+	-o-transition: background 0.3s ease-in-out;
+	-ms-transition: background 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+}
+
+ul.projects li a h3{
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 150%;
+}
+
+ul.projects li a div.des{
+	font-weight: 300;
+}
+
+ul.projects li:last-child{
+	margin-bottom: 0;
+}
+
+ul.projects li.eyeballz_cube{
+	background: #FFF url('../images/eyeballz_cube.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+ul.projects li.eyeballz_cube a:hover{
+	background-color: #00d6fb;
+	color:#000;
+}
+
+ul.projects li.eyeballz{
+	background: #FFF url('../images/eyeballz.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+ul.projects li.eyeballz a:hover{
+	background-color: #e82e14;
+	color:#000;
+}
+
+ul.projects li.flap_matrix{
+	background: #FFF url('../images/flap_matrix.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+ul.projects li.flap_matrix a:hover{
+	background-color: #3db662;
+	color:#000;
+}
+
+ul.projects li.dangerous_popsicle{
+	background: #FFF url('../images/dangerous_popsicle.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+ul.projects li.dangerous_popsicle a:hover{
+	background-color: #ffba00;
+	color:#000;
+}
+
+ul.projects li.eyebox{
+	background: #FFF url('../images/eyebox.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+ul.projects li.eyebox a:hover{
+	background-color: #fde500;
+	color:#000;
+}
+
+/* News */
+#news_page{
+	background: #f6f6f6;
+	padding-top: 6%;
+}
+
+.item{
+  width:350px;
+  height:450px;
+}
+
+.item:hover{
+	background: #fff;
+}
+
+.item .new{
+	width: 90%;
+	display: block;
+	padding: 5%;
+}
+
+.item img{
+	width: 100%;
+}
+
+.size8 {
+				width: 100%;
+				height: 70%;
+				overflow: hidden;
+}
+
+.size2 {
+				width: 100%;
+				height: 30%;
+}
+
+.item p.tag, .item p.timestamp{
+	opacity: .5;
+	font-size: 0.8rem;
+}
+
+.item p{
+	margin: 1rem 1rem 0;
+	text-align: center;
+}
+/* Footer */
+
+	#footer {
+		background: #fff;
+		font-family: 'Gotham';
+		font-weight: 500;
+		font-size: 1rem;
+		color: #333;
+		padding: 2rem 0 2rem;
+		text-align: center;
+		clear:both;
+	}
+
+/*   Helper   */
+.breath{
+	animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: breathing;
+}
+
+@keyframes breathing{
+	0% {transform:scale(1);}
+	100% {transform:scale(1.2);}
+}
+
+@-webkit-keyframes breathing /*Safari and Chrome*/
+{
+	0% {-webkit-transform:scale(1);}
+	100% {-webkit-transform:scale(1.2);}
+}
+
+
+/* Projects */
+.video4wrapper{
+	position: relative;
+	width: 80vw;
+	margin: auto;
+	padding-bottom: 4rem;
+}
+
+.video4wrapper iframe{
+	width: 40vw
+	height: calc(40vw/1.77777778);
+}
+
+.eyeballz header{
+	background: url('../images/header_eyeballz.jpg') no-repeat center top;
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 30vw;
+}
+
+.eyeballz-cube header{
+	background: url('../images/header_eyeballz_cube.jpg') no-repeat center top;
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 30vw;
+}
+
+.dangerous-popsicles header{
+	background: url('../images/header_dangerous_popsicle.jpg') no-repeat center top;
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 30vw;
+}
+
+.flap header{
+	background: url('../images/header_flapbg.jpg') no-repeat center top;
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 30vw;
+}
+
+#featured a, #featured a:active, #featured a:visited{
+  display:inline-block;
+  opacity:0.6;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  background:transparent;
+  margin:0.5em 1.5em 0.5em 0;
+  line-height:120%;
+  vertical-align: middle;
+}
+
+#featured a:hover{
+  opacity:0.3;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  background:transparent;
+}
+
+#featured a.creativeprojects{
+  width:300px;
+}
+
+#featured a.fubiz{
+  width:120px;
+}
+
+#featured a.wired{
+  width:160px;
+}
+
+#featured a.psfk{
+  width:80px;
+}
+
+#featured a.designboom{
+  width:200px;
+}
+
+#featured a.buzzfeed{
+  width:200px;
+}
+
+#featured a.nydaily{
+  width:200px;
+}
+
+#featured a.notcot{
+}
+
+#featured a.fox{
+  width:80px;
+}
+
+#featured a.feel{
+}
+
+#featured a.laugh{
+  width:80px;
+}
+
+#featured a.spic{
+  width:150px;
+}
+
+#featured a.3dprint{
+  width:200px;
+}
+
+#featured a.smithsonian{
+  width:200px;
+}
+
+#featured a.mymodernmet{
+  width:120px;
+}
+
+#featured a.live105{
+  width:200px;
+}
+
+#featured a img{
+  width:100%;
+}
