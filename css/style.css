@@ -847,4 +847,12 @@ ul.projects li.eyebox a:hover{
 		font-size: 1.2rem;
 	}
 
+	section .content{
+		width: 100%;
+	}
+
+	button{
+		font-size: 1.2rem;
+	}
+
 }
