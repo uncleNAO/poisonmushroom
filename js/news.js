@@ -24,7 +24,7 @@ $(function(){
 
 
     function n2o(){
-      $.getJSON('https://www.poisonmushroom.cc/js/news.json', function(data) {
+      $.getJSON('https://www.poisonmushroom.cc/news.json', function(data) {
 
         var items = data.news;
 
