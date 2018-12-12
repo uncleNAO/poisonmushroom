@@ -805,3 +805,46 @@ ul.projects li.eyebox a:hover{
 #featured a img{
   width:100%;
 }
+
+
+@media screen and (max-width: 480px) {
+	section h2 {
+		font-size: 4rem;
+	}
+
+	#header nav {
+    text-align: center;
+    float: none;
+		margin: auto;
+	}
+
+	#header h1{
+		margin: auto;
+	}
+
+	#header .row{
+		width: 100%;
+	}
+
+	#header nav ul{
+		padding: 0;
+	}
+
+	#header nav ul li{
+		margin: 1.5rem 1rem 1rem;
+	}
+
+	#header nav{
+		background: #f2f2f2;
+	}
+
+	#sheader nav ul li{
+		font-size: 1.2rem;
+		margin: 2.5rem .2rem 0;
+	}
+
+	#sheader nav ul li a{
+		font-size: 1.2rem;
+	}
+
+}
